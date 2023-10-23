@@ -10,7 +10,7 @@ const SearchForm = styled(Form)`
 const SearchBox = () => {
   let [keyword, setKeyword] = useState("");
   let dispatch = useDispatch();
-  let { contact } = useSelector((state) => state);
+  useSelector((state) => state);
   const searchByName = (event) => {
     event.preventDefault();
     dispatch({ type: "SEARCH_BY_USERNAME", payload: { keyword } });
